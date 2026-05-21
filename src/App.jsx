@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import {
-  Mail,
   Download,
   Code2,
   Database,
@@ -15,7 +14,6 @@ import {
 
 import {
   FaGithub,
-  FaLinkedin,
   FaJava,
   FaPhp,
   FaReact,
@@ -502,7 +500,7 @@ function Hero({ isDark, t }) {
           <motion.a
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
-            href="#contacto"
+            href="mailto:sebastianga48@gmail.com"
             className="rounded-full bg-cyan-400 px-8 py-4 font-semibold text-[#0f1117] transition hover:bg-cyan-300"
           >
             {t.hero.contact} →
@@ -525,13 +523,6 @@ function Hero({ isDark, t }) {
             <FaGithub size={25} />
           </motion.a>
 
-          <motion.a whileHover={{ y: -5, scale: 1.15 }} href="https://linkedin.com/in/tuusuario" target="_blank" rel="noreferrer" className="hover:text-cyan-400">
-            <FaLinkedin size={25} />
-          </motion.a>
-
-          <motion.a whileHover={{ y: -5, scale: 1.15 }} href="mailto:sebastianga48@gmail.com" className="hover:text-cyan-400">
-            <Mail size={25} />
-          </motion.a>
         </motion.div>
       </motion.div>
     </section>
