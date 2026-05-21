@@ -7,7 +7,6 @@ import {
   Users,
   Sparkles,
   ArrowUpRight,
-  ExternalLink,
   Sun,
   Moon,
 } from "lucide-react"
@@ -42,9 +41,7 @@ const content = {
       about: "Sobre mí",
       stack: "Stack",
       skills: "Habilidades",
-      projects: "Proyectos",
-      contact: "Contáctame",
-    },
+      projects: "Proyectos",    },
     hero: {
       greeting: "Hola! Soy Sebastian Gomez ",
       title: "Software Developer",
@@ -131,7 +128,7 @@ const content = {
           description:
             "Sistema web real para facturación, inventario y control de ventas, desarrollado con Laravel, MySQL, APIs REST, Blade y Bootstrap.",
           tech: ["Laravel", "MySQL", "Blade", "Bootstrap", "Postman"],
-          github: "https://github.com/sebas11042",
+          github: "https://github.com/JafethAriasH/Sistema-Kukula",
           demo: "#",
           image: "/images/projects/kukula-pos.png",
           featured: false,
@@ -142,7 +139,7 @@ const content = {
           description:
             "Sistema de boletería con flujo de reservas en tres pasos, selección de asientos, control de concurrencia y generación de PDF.",
           tech: ["Spring Boot", "SQL Server", "Thymeleaf", "iText"],
-          github: "https://github.com/sebas11042",
+          github: "https://github.com/sebas11042/CineFlix",
           demo: "#",
           image: "/public/images/projects/Cineflix.png",
           featured: false,
@@ -153,7 +150,7 @@ const content = {
           description:
             "Aplicación web para compra y alquiler de videojuegos con carrito, wishlist, roles de usuario y autenticación JWT.",
           tech: ["Spring Boot", "MySQL", "JWT", "Thymeleaf"],
-          github: "https://github.com/sebas11042",
+          github: "https://github.com/sebas11042/GameVerse",
           demo: "#",
           image: "/public/images/projects/GameVerse.png",
           featured: false,
@@ -164,7 +161,7 @@ const content = {
           description:
             "Sistema académico de transporte inteligente con desarrollo frontend en Vue, documentación técnica y trabajo colaborativo con Git.",
           tech: ["Vue", "TypeScript", "Git", "Análisis"],
-          github: "https://github.com/sebas11042/Zybus-Frontend",
+          github: "https://github.com/FallasDev/Zybus-Frontend",
           demo: "#",
           image: "/public/images/projects/Zybus.png",
           featured: false,
@@ -268,7 +265,7 @@ const content = {
           description:
             "Real-world web system for billing, inventory and sales management, built with Laravel, MySQL, REST APIs, Blade and Bootstrap.",
           tech: ["Laravel", "MySQL", "Blade", "Bootstrap", "Postman"],
-          github: "https://github.com/sebas11042",
+          github: "https://github.com/JafethAriasH/Sistema-Kukula",
           demo: "#",
           image: "/images/projects/kukula-pos.png",
           featured: false,
@@ -279,7 +276,7 @@ const content = {
           description:
             "Ticket reservation system with a three-step booking flow, seat selection, concurrency control and PDF generation.",
           tech: ["Spring Boot", "SQL Server", "Thymeleaf", "iText"],
-          github: "https://github.com/sebas11042",
+          github: "https://github.com/sebas11042/CineFlix",
           demo: "#",
           image: "/public/images/projects/Cineflix.png",
           featured: false,
@@ -290,7 +287,7 @@ const content = {
           description:
             "Web application for buying and renting video games, with shopping cart, wishlist, user roles and JWT authentication.",
           tech: ["Spring Boot", "MySQL", "JWT", "Thymeleaf"],
-          github: "https://github.com/sebas11042",
+          github: "https://github.com/sebas11042/GameVerse",
           demo: "#",
           image: "/public/images/projects/GameVerse.png",
           featured: false,
@@ -301,7 +298,7 @@ const content = {
           description:
             "Smart transportation academic system with Vue frontend development, technical documentation and collaborative Git workflow.",
           tech: ["Vue", "TypeScript", "Git", "Analysis"],
-          github: "https://github.com/sebas11042/Zybus-Frontend",
+          github: "https://github.com/FallasDev/Zybus-Frontend",
           demo: "#",
           image: "/public/images/projects/Zybus.png",
           featured: false,
@@ -422,14 +419,6 @@ function Navbar({ isDark, theme, setTheme, lang, setLang, t }) {
             {lang === "es" ? "EN" : "ES"}
           </button>
 
-          <a
-            href="mailto:sebastianga48@gmail.com"
-            className={`flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-semibold transition hover:border-cyan-400 hover:text-cyan-400 ${
-              isDark ? "border-white/15" : "border-zinc-300"
-            }`}
-          >
-            {t.nav.contact} <ArrowUpRight size={17} />
-          </a>
         </div>
       </nav>
     </motion.header>
@@ -746,11 +735,6 @@ function Projects({ isDark, t }) {
                   <motion.a whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} href={project.github} target="_blank" rel="noreferrer" className={`flex items-center gap-2 rounded-full border px-5 py-3 text-sm font-semibold transition hover:border-cyan-400 hover:text-cyan-400 ${isDark ? "border-white/15 text-white" : "border-zinc-300 text-zinc-900"}`}>
                     <FaGithub size={18} />
                     {t.projects.github}
-                  </motion.a>
-
-                  <motion.a whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} href={project.demo} className="flex items-center gap-2 rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-[#0f1117] transition hover:bg-cyan-300">
-                    <ExternalLink size={18} />
-                    {t.projects.details}
                   </motion.a>
                 </div>
               </div>
