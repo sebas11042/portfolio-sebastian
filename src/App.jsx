@@ -9,6 +9,8 @@ import {
   ArrowUpRight,
   Sun,
   Moon,
+  Menu,
+  X,
 } from "lucide-react"
 
 import {
@@ -357,6 +359,18 @@ function App() {
 }
 
 function Navbar({ isDark, theme, setTheme, lang, setLang, t }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const navLinks = [
+    { href: "#inicio", label: t.nav.home },
+    { href: "#sobre-mi", label: t.nav.about },
+    { href: "#stack", label: t.nav.stack },
+    { href: "#skills", label: t.nav.skills },
+    { href: "#proyectos", label: t.nav.projects },
+  ]
+
+  const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark")
+  const toggleLang = () => setLang(lang === "es" ? "en" : "es")
+
   return (
     <motion.header
       initial={{ y: -80, opacity: 0 }}
@@ -366,8 +380,8 @@ function Navbar({ isDark, theme, setTheme, lang, setLang, t }) {
         isDark ? "bg-[#0f1117]/70" : "bg-white/70"
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between">
-        <a href="#inicio" className="text-2xl font-black tracking-tight">
+      <nav className="relative mx-auto flex max-w-7xl items-center justify-between">
+        <a href="#inicio" onClick={() => setIsMenuOpen(false)} className="text-xl font-black tracking-tight sm:text-2xl">
           Sebastián <span className="text-cyan-400">Gómez</span>
         </a>
 
@@ -378,33 +392,20 @@ function Navbar({ isDark, theme, setTheme, lang, setLang, t }) {
               : "border-zinc-200 bg-white/80"
           }`}
         >
-          <a href="#inicio" className="text-sm font-medium hover:text-cyan-400">
-            {t.nav.home}
-          </a>
-          <a href="#sobre-mi" className="text-sm font-medium hover:text-cyan-400">
-            {t.nav.about}
-          </a>
-          <a href="#stack" className="text-sm font-medium hover:text-cyan-400">
-            {t.nav.stack}
-          </a>
-          <a href="#skills" className="text-sm font-medium hover:text-cyan-400">
-            {t.nav.skills}
-          </a>
-          <a href="#proyectos" className="text-sm font-medium hover:text-cyan-400">
-            {t.nav.projects}
-          </a>
+          {navLinks.map((link) => (
+            <a key={link.href} href={link.href} className="text-sm font-medium hover:text-cyan-400">
+              {link.label}
+            </a>
+          ))}
           <a href="https://github.com/sebas11042" target="_blank" rel="noreferrer" className="text-sm font-medium hover:text-cyan-400">
             GitHub
           </a>
-          <a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noreferrer" className="text-sm font-medium hover:text-cyan-400">
-            LinkedIn
-          </a>
         </div>
 
-        <div className="hidden items-center gap-4 md:flex">
+        <div className="flex items-center gap-2 sm:gap-3">
           <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className={`flex h-11 w-11 items-center justify-center rounded-full border transition hover:border-cyan-400 hover:text-cyan-400 ${
+            onClick={toggleTheme}
+            className={`flex h-10 w-10 items-center justify-center rounded-full border transition hover:border-cyan-400 hover:text-cyan-400 md:h-11 md:w-11 ${
               isDark ? "border-white/15" : "border-zinc-300"
             }`}
             aria-label="Toggle theme"
@@ -413,13 +414,65 @@ function Navbar({ isDark, theme, setTheme, lang, setLang, t }) {
           </button>
 
           <button
-            onClick={() => setLang(lang === "es" ? "en" : "es")}
-            className="font-bold transition hover:text-cyan-400"
+            onClick={toggleLang}
+            className={`h-10 rounded-full border px-3 text-sm font-bold transition hover:border-cyan-400 hover:text-cyan-400 md:border-0 md:px-0 ${
+              isDark ? "border-white/15" : "border-zinc-300"
+            }`}
           >
             {lang === "es" ? "EN" : "ES"}
           </button>
 
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className={`flex h-10 w-10 items-center justify-center rounded-full border transition hover:border-cyan-400 hover:text-cyan-400 md:hidden ${
+              isDark ? "border-white/15" : "border-zinc-300"
+            }`}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen}
+          >
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
+
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.2 }}
+            className={`absolute left-0 right-0 top-[calc(100%+1rem)] rounded-2xl border p-4 shadow-2xl md:hidden ${
+              isDark
+                ? "border-white/10 bg-[#151924]/95"
+                : "border-zinc-200 bg-white/95"
+            }`}
+          >
+            <div className="flex flex-col gap-2">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`rounded-xl px-4 py-3 text-sm font-semibold transition hover:text-cyan-400 ${
+                    isDark ? "hover:bg-white/[0.06]" : "hover:bg-zinc-100"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              ))}
+
+              <a
+                href="https://github.com/sebas11042"
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setIsMenuOpen(false)}
+                className={`rounded-xl px-4 py-3 text-sm font-semibold transition hover:text-cyan-400 ${
+                  isDark ? "hover:bg-white/[0.06]" : "hover:bg-zinc-100"
+                }`}
+              >
+                GitHub
+              </a>
+            </div>
+          </motion.div>
+        )}
       </nav>
     </motion.header>
   )
