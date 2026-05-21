@@ -108,7 +108,7 @@ const content = {
           tech: ["Web3", "Cairo", "Blockchain Gaming", "Open Source"],
           github: "https://github.com/SunsetLabs-Game/COA-FrontEnd",
           demo: "#",
-          image: "/public/images/projects/citizen-of-arcanis.png",
+          image: "/images/projects/citizen-of-arcanis.png",
           featured: true,
         },
         {
@@ -119,7 +119,7 @@ const content = {
           tech: ["Worldcoin", "Web3", "MVP", "Hackathon"],
           github: "https://github.com/Krovva/krovva-mvp",
           demo: "#",
-          image: "/public/images/projects/Krovva.png",
+          image: "/images/projects/Krovva.png",
           featured: true,
         },
         {
@@ -141,7 +141,7 @@ const content = {
           tech: ["Spring Boot", "SQL Server", "Thymeleaf", "iText"],
           github: "https://github.com/sebas11042/CineFlix",
           demo: "#",
-          image: "/public/images/projects/Cineflix.png",
+          image: "/images/projects/Cineflix.png",
           featured: false,
         },
         {
@@ -152,7 +152,7 @@ const content = {
           tech: ["Spring Boot", "MySQL", "JWT", "Thymeleaf"],
           github: "https://github.com/sebas11042/GameVerse",
           demo: "#",
-          image: "/public/images/projects/GameVerse.png",
+          image: "/images/projects/GameVerse.png",
           featured: false,
         },
         {
@@ -163,7 +163,7 @@ const content = {
           tech: ["Vue", "TypeScript", "Git", "Análisis"],
           github: "https://github.com/FallasDev/Zybus-Frontend",
           demo: "#",
-          image: "/public/images/projects/Zybus.png",
+          image: "/images/projects/Zybus.png",
           featured: false,
         },
       ],
@@ -256,7 +256,7 @@ const content = {
           tech: ["Worldcoin", "Web3", "MVP", "Hackathon"],
           github: "https://github.com/Krovva/krovva-mvp",
           demo: "#",
-          image: "/public/images/projects/Krovva.png",
+          image: "/images/projects/Krovva.png",
           featured: true,
         },
         {
@@ -278,7 +278,7 @@ const content = {
           tech: ["Spring Boot", "SQL Server", "Thymeleaf", "iText"],
           github: "https://github.com/sebas11042/CineFlix",
           demo: "#",
-          image: "/public/images/projects/Cineflix.png",
+          image: "/images/projects/Cineflix.png",
           featured: false,
         },
         {
@@ -289,7 +289,7 @@ const content = {
           tech: ["Spring Boot", "MySQL", "JWT", "Thymeleaf"],
           github: "https://github.com/sebas11042/GameVerse",
           demo: "#",
-          image: "/public/images/projects/GameVerse.png",
+          image: "/images/projects/GameVerse.png",
           featured: false,
         },
         {
@@ -300,7 +300,7 @@ const content = {
           tech: ["Vue", "TypeScript", "Git", "Analysis"],
           github: "https://github.com/FallasDev/Zybus-Frontend",
           demo: "#",
-          image: "/public/images/projects/Zybus.png",
+          image: "/images/projects/Zybus.png",
           featured: false,
         },
       ],
