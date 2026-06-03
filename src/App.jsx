@@ -34,7 +34,7 @@ import {
   SiMongodb,
   SiDotnet,
 } from "react-icons/si"
-import { image } from "framer-motion/client"
+
 
 const content = {
   es: {
@@ -113,17 +113,18 @@ const content = {
           image: "/images/projects/citizen-of-arcanis.png",
           featured: true,
         },
-        {
-          title: "Krovva",
-          type: "MVP Fitness Web3",
+                {
+          title: "ZyBus",
+          type: "Proyecto académico",
           description:
-            "MVP desarrollado en hackathon, integrado conceptualmente con el ecosistema Worldcoin para explorar identidad digital en una aplicación fitness.",
-          tech: ["Worldcoin", "Web3", "MVP", "Hackathon"],
-          github: "https://github.com/Krovva/krovva-mvp",
+            "Sistema académico de transporte inteligente con desarrollo frontend en Vue, documentación técnica y trabajo colaborativo con Git.",
+          tech: ["Vue", "TypeScript", "Git", "Análisis"],
+          github: "https://github.com/FallasDev/Zybus-Frontend",
           demo: "#",
-          image: "/images/projects/Krovva.png",
-          featured: true,
+          image: "/images/projects/Zybus.png",
+          featured: false,
         },
+
         {
           title: "Kukula POS",
           type: "Sistema de facturación",
@@ -158,15 +159,15 @@ const content = {
           featured: false,
         },
         {
-          title: "ZyBus",
-          type: "Proyecto académico",
+          title: "Krovva",
+          type: "MVP Fitness Web3",
           description:
-            "Sistema académico de transporte inteligente con desarrollo frontend en Vue, documentación técnica y trabajo colaborativo con Git.",
-          tech: ["Vue", "TypeScript", "Git", "Análisis"],
-          github: "https://github.com/FallasDev/Zybus-Frontend",
+            "MVP desarrollado en hackathon, integrado conceptualmente con el ecosistema Worldcoin para explorar identidad digital en una aplicación fitness.",
+          tech: ["Worldcoin", "Web3", "MVP", "Hackathon"],
+          github: "https://github.com/Krovva/krovva-mvp",
           demo: "#",
-          image: "/images/projects/Zybus.png",
-          featured: false,
+          image: "/images/projects/image.png",
+          featured: true,
         },
       ],
     },
@@ -258,7 +259,7 @@ const content = {
           tech: ["Worldcoin", "Web3", "MVP", "Hackathon"],
           github: "https://github.com/Krovva/krovva-mvp",
           demo: "#",
-          image: "/images/projects/Krovva.png",
+          image: "/images/projects/image.png",
           featured: true,
         },
         {
@@ -539,14 +540,16 @@ function Hero({ isDark, t }) {
         </motion.p>
 
         <motion.div variants={fadeUp} className="flex flex-wrap justify-center gap-4">
-          <motion.a
-            whileHover={{ scale: 1.08 }}
-            whileTap={{ scale: 0.95 }}
-            href="mailto:sebastianga48@gmail.com"
-            className="rounded-full bg-cyan-400 px-8 py-4 font-semibold text-[#0f1117] transition hover:bg-cyan-300"
-          >
-            {t.hero.contact} →
-          </motion.a>
+        <motion.a
+          whileHover={{ scale: 1.08 }}
+          whileTap={{ scale: 0.95 }}
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=sebastianga48@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="rounded-full bg-cyan-400 px-8 py-4 font-semibold text-[#0f1117] transition hover:bg-cyan-300"
+        >
+          {t.hero.contact} →
+        </motion.a>
 
           <motion.a
             whileHover={{ scale: 1.08 }}
