@@ -252,15 +252,15 @@ const content = {
           featured: true,
         },
         {
-          title: "Krovva",
-          type: "Web3 Fitness MVP",
+          title: "ZyBus",
+          type: "Academic project",
           description:
-            "Hackathon MVP conceptually integrated with the Worldcoin ecosystem to explore digital identity in a fitness application.",
-          tech: ["Worldcoin", "Web3", "MVP", "Hackathon"],
-          github: "https://github.com/Krovva/krovva-mvp",
+            "Smart transportation academic system with Vue frontend development, technical documentation and collaborative Git workflow.",
+          tech: ["Vue", "TypeScript", "Git", "Analysis"],
+          github: "https://github.com/FallasDev/Zybus-Frontend",
           demo: "#",
-          image: "/images/projects/image.png",
-          featured: true,
+          image: "/images/projects/Zybus.png",
+          featured: false,
         },
         {
           title: "Kukula POS",
@@ -295,16 +295,17 @@ const content = {
           image: "/images/projects/GameVerse.png",
           featured: false,
         },
-        {
-          title: "ZyBus",
-          type: "Academic project",
+
+                {
+          title: "Krovva",
+          type: "Web3 Fitness MVP",
           description:
-            "Smart transportation academic system with Vue frontend development, technical documentation and collaborative Git workflow.",
-          tech: ["Vue", "TypeScript", "Git", "Analysis"],
-          github: "https://github.com/FallasDev/Zybus-Frontend",
+            "Hackathon MVP conceptually integrated with the Worldcoin ecosystem to explore digital identity in a fitness application.",
+          tech: ["Worldcoin", "Web3", "MVP", "Hackathon"],
+          github: "https://github.com/Krovva/krovva-mvp",
           demo: "#",
-          image: "/images/projects/Zybus.png",
-          featured: false,
+          image: "/images/projects/image.png",
+          featured: true,
         },
       ],
     },
